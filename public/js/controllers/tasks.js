@@ -5,8 +5,11 @@
 
 angular.module('mean.tasks').controller('TasksController', ['$scope', '$stateParams', '$location', 'Global', 'Tasks', function ($scope, $stateParams, $location, Global, Tasks) {
     $scope.global = Global;
-    //var self = this;
     $scope.taskFilter = {isActive:true, isComplete:false};
+
+    Tasks.query(function (tasks) {
+        $scope.tasks = tasks;
+    });
 
     $scope.create = function () {
         var task = new Tasks({
@@ -59,14 +62,6 @@ angular.module('mean.tasks').controller('TasksController', ['$scope', '$statePar
             $location.path('task/' + task._id);
         });
     };
-
-    $scope.find = function () {
-        Tasks.query(function (tasks) {
-            $scope.tasks = tasks;
-        });
-    };
-
-    $scope.find();
 
     $scope.findOne = function () {
         Tasks.get({
