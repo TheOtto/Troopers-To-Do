@@ -19,7 +19,7 @@
     </section>
     <section id="secTaskList">
         <ul>
-            <li class="clearfix" ng-repeat="task in tasks  | filter: {isActive:true, isComplete:false}" ng-class="{'completed': task.isComplete == true}">
+            <li class="clearfix" ng-repeat="task in tasks  | filter: taskFilter" ng-class="{'completed': task.isComplete == true}">
                 <div class="taskDetail">
                     <span class="taskCategory">
                         <ng-pluralize count="task.project" when="{ 0: 'Bimasa', 1: 'Papyon', 2: 'Lokum', 3: 'Irmik', 4: 'Yemek.com' }"></ng-pluralize>
@@ -36,6 +36,8 @@
         </ul>
     </section>
     <progress max="100" value="50"></progress>
-
+    <a data-ng-click="changeFilter('all')">All</a>
+    <a data-ng-click="changeFilter('done')">Done</a>
+    <a data-ng-click="changeFilter('deleted')">Deleted</a>
 </section>
 

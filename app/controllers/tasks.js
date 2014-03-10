@@ -89,7 +89,7 @@ exports.show = function (req, res) {
  * List of Tasks
  */
 exports.all = function (req, res) {
-    Task.find().sort('-created').populate('user', 'name username').exec(function (err, tasks) {
+    Task.find().sort('-createDate').exec(function (err, tasks) {
         if (err) {
             res.render('error', {
                 status: 500

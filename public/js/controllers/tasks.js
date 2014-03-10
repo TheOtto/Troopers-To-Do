@@ -6,6 +6,7 @@
 angular.module('mean.tasks').controller('TasksController', ['$scope', '$stateParams', '$location', 'Global', 'Tasks', function ($scope, $stateParams, $location, Global, Tasks) {
     $scope.global = Global;
     //var self = this;
+    $scope.taskFilter = {isActive:true, isComplete:false};
 
     $scope.create = function () {
         var task = new Tasks({
@@ -21,6 +22,20 @@ angular.module('mean.tasks').controller('TasksController', ['$scope', '$statePar
         $scope.project = '';
         $scope.isComplete = false;
         $scope.find();
+    };
+    $scope.changeFilter = function (condition)
+    {
+        switch (condition){
+            case 'all':
+                $scope.taskFilter = {};
+                break;
+            case 'done':
+                $scope.taskFilter =  {isActive:true, isComplete:false};
+                break;
+            case 'deleted':
+                $scope.taskFilter = {isActive:false};
+                break;
+        }
     };
 
     $scope.remove = function (task) {
@@ -62,14 +77,14 @@ angular.module('mean.tasks').controller('TasksController', ['$scope', '$statePar
     };
 
     $scope.complete = function(task){
-      task.isComplete = !task.isComplete;
-      task.modifiedDate = new Date().getTime();
-      $scope.update(task);
+        task.isComplete = !task.isComplete;
+        task.modifiedDate = new Date().getTime();
+        $scope.update(task);
     };
 
     $scope.active = function(task){
-      task.isActive = !task.isActive;
-      task.modifiedDate = new Date().getTime();
-      $scope.update(task);
+        task.isActive = !task.isActive;
+        task.modifiedDate = new Date().getTime();
+        $scope.update(task);
     };
 }]);
