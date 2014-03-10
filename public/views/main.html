@@ -1,0 +1,41 @@
+<section id="todoapp" data-ng-controller="TasksController">
+    <section class="clearfix" id="secTaskAdd">
+        <form >
+            <input type="text" data-ng-model="content" name="txtTask" maxlength="130">
+            <div class="menus">
+                <select data-ng-model="project">
+                    <option value="-1">Kategori Seçin
+                    <option value="0">Bimasa
+                    <option value="1">Papyon
+                    <option value="2">Lokum
+                    <option value="3">İrmik
+                    <option value="4">Yemek.com
+                </select>
+                <span class="glyphicon glyphicon-th-list"></span>
+                <span class="glyphicon glyphicon-plus"></span>
+            </div>
+        </form>
+    </section>
+    <section id="secTaskList" ng-cloak="">
+        <ul>
+            <li class="clearfix">
+                <div class="taskDetail"><span class="taskCategory">Bimasa</span> <span class="taskDate">13.01.2014</span>
+                </div>
+                <span class="taskName">Task one</span>
+
+                <div class="taskActions"><span class="glyphicon glyphicon-ok"></span> <span
+                        class="glyphicon glyphicon-pencil"></span></div>
+            </li>
+            <li class="clearfix completed">
+                <div class="taskDetail"><span class="taskCategory">Bimasa</span> <span class="taskDate">13.01.2014</span>
+                </div>
+                <span class="taskName">Task one</span>
+
+                <div class="taskActions"><span class="glyphicon glyphicon-ok"></span>
+                <span class="glyphicon glyphicon-pencil"></span></div>
+            </li>
+        </ul>
+    </section>
+    <progress max="100" value="50"></progress>
+
+</section>
