@@ -7,10 +7,6 @@ angular.module('mean.tasks').controller('TasksController', ['$scope', '$statePar
     $scope.global = Global;
     $scope.taskFilter = {isActive:true, isComplete:false};
 
-    Tasks.query(function (tasks) {
-        $scope.tasks = tasks;
-    });
-
     $scope.create = function () {
         var task = new Tasks({
             content: $scope.content,
@@ -32,8 +28,11 @@ angular.module('mean.tasks').controller('TasksController', ['$scope', '$statePar
             case 'all':
                 $scope.taskFilter = {};
                 break;
+            case 'active':
+                $scope.taskFilter = {isActive:true, isComplete:false};
+                break;
             case 'done':
-                $scope.taskFilter =  {isActive:true, isComplete:false};
+                $scope.taskFilter =  {isActive:true, isComplete:true};
                 break;
             case 'deleted':
                 $scope.taskFilter = {isActive:false};
@@ -63,6 +62,14 @@ angular.module('mean.tasks').controller('TasksController', ['$scope', '$statePar
         });
     };
 
+    $scope.find = function() {
+        Tasks.query(function(tasks) {
+            $scope.tasks = tasks;
+        });
+    };
+
+    $scope.find();
+
     $scope.findOne = function () {
         Tasks.get({
             taskId: $stateParams.taskId
@@ -81,5 +88,18 @@ angular.module('mean.tasks').controller('TasksController', ['$scope', '$statePar
         task.isActive = !task.isActive;
         task.modifiedDate = new Date().getTime();
         $scope.update(task);
+        $scope.find();
     };
+
+    $scope.editTask = function (task) {
+        $scope.editTask = task;
+    };
+
+    $scope.doneEditing = function (task) {
+        $scope.editedTask = null;
+        task.content = task.content.trim();
+        task.modifiedDate = new Date().getTime();
+        $scope.update(task);
+    };
+
 }]);

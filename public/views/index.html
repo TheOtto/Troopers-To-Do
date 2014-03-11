@@ -26,8 +26,10 @@
                     </span>
                     <span class="taskDate">{{task.created}}</span>
                 </div>
-                <span class="taskName">{{task.content}}</span>
-
+                <label class="taskName" ng-dblclick="editTask(task)">{{task.content}}</label>
+                <form ng-submit="doneEditing(task)">
+                    <input ng-trim="false" ng-model="task.content" ng-blur="doneEditing(task)">
+                </form>
                 <div class="taskActions">
                     <a class="glyphicon glyphicon-ok" ng-click="complete(task)">OK</a>
                     <a class="glyphicon glyphicon-pencil" ng-click="active(task)">Delete</a>
@@ -37,6 +39,7 @@
     </section>
     <progress max="100" value="50"></progress>
     <a data-ng-click="changeFilter('all')">All</a>
+    <a data-ng-click="changeFilter('active')">Active</a>
     <a data-ng-click="changeFilter('done')">Done</a>
     <a data-ng-click="changeFilter('deleted')">Deleted</a>
 </section>
