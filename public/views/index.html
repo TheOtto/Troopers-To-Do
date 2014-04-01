@@ -1,46 +1,54 @@
 <section id="todoapp" data-ng-controller="TasksController">
 
-    <section class="clearfix" id="secTaskAdd">
-        <form data-ng-submit="create()">
-            <input type="text" data-ng-model="content" name="txtTask" maxlength="130">
-            <div class="menus">
-                <select data-ng-model="project">
-                    <option value="-1">Kategori Seçin
-                    <option value="0">Bimasa
-                    <option value="1">Papyon
-                    <option value="2">Lokum
-                    <option value="3">İrmik
-                    <option value="4">Yemek.com
-                </select>
-                <span class="glyphicon glyphicon-th-list"></span>
-                <span class="glyphicon glyphicon-plus"></span>
-            </div>
-        </form>
-    </section>
-    <section id="secTaskList">
-        <ul>
-            <li class="clearfix" ng-repeat="task in tasks  | filter: taskFilter" ng-class="{'completed': task.isComplete == true}">
-                <div class="taskDetail">
-                    <span class="taskCategory">
-                        <ng-pluralize count="task.project" when="{ 0: 'Bimasa', 1: 'Papyon', 2: 'Lokum', 3: 'Irmik', 4: 'Yemek.com' }"></ng-pluralize>
-                    </span>
-                    <span class="taskDate">{{task.created}}</span>
-                </div>
-                <label class="taskName" ng-dblclick="editTask(task)">{{task.content}}</label>
-                <form ng-submit="doneEditing(task)">
-                    <input ng-trim="false" ng-model="task.content" ng-blur="doneEditing(task)">
-                </form>
-                <div class="taskActions">
-                    <a class="glyphicon glyphicon-ok" ng-click="complete(task)">OK</a>
-                    <a class="glyphicon glyphicon-pencil" ng-click="active(task)">Delete</a>
-                </div>
-            </li>
-        </ul>
-    </section>
-    <progress max="100" value="50"></progress>
-    <a data-ng-click="changeFilter('all')">All</a>
-    <a data-ng-click="changeFilter('active')">Active</a>
-    <a data-ng-click="changeFilter('done')">Done</a>
-    <a data-ng-click="changeFilter('deleted')">Deleted</a>
+  <section class="clearfix" id="secTaskAdd">
+    <form data-ng-submit="create()">
+      <input type="text" data-ng-model="content" name="txtTask" maxlength="130">
+
+      <div class="menus">
+        <select data-ng-model="project">
+          <option value="-1">Kategori Seçin
+          <option value="0">Bimasa
+          <option value="1">Papyon
+          <option value="2">Lokum
+          <option value="3">İrmik
+          <option value="4">Yemek.com
+        </select>
+        <span class="glyphicon glyphicon-th-list"></span>
+        <span class="glyphicon glyphicon-plus"></span>
+      </div>
+    </form>
+  </section>
+
+  <section id="secTaskList" ng-cloak>
+    <ul>
+      <li class="clearfix" ng-repeat="task in tasks | filter: taskFilter"
+          ng-class="{'completed': task.isComplete == true}">
+        <div class="taskDetail">
+          <span class="taskCategory">
+              <ng-pluralize count="task.project"
+                            when="{ 0: 'Bimasa', 1: 'Papyon', 2: 'Lokum', 3: 'Irmik', 4: 'Yemek.com' }">
+              </ng-pluralize>
+          </span>
+          <span class="taskDate">{{task.created}}</span>
+        </div>
+
+        <span class="taskName" ng-dblclick="editTask(task)" ng-hide="editedTask != null">{{task.content}}</span>
+
+        <span class="taskName"><form ng-submit="doneEditing(task)" ng-show="editedTask != null">
+          <input ng-trim="false" ng-model="task.content" ng-blur="doneEditing(task)">
+        </form></span>
+
+        <div class="taskActions">
+          <a class="glyphicon glyphicon-ok" ng-click="complete(task)"></a>
+          <a class="glyphicon glyphicon-pencil" ng-click="active(task)"></a>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <a data-ng-click="changeFilter('all')">All</a>
+  <a data-ng-click="changeFilter('active')">Active</a>
+  <a data-ng-click="changeFilter('done')">Done</a>
+  <a data-ng-click="changeFilter('deleted')">Deleted</a>
 </section>
 

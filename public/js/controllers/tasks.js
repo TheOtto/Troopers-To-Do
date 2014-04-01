@@ -92,7 +92,7 @@ angular.module('mean.tasks').controller('TasksController', ['$scope', '$statePar
     };
 
     $scope.editTask = function (task) {
-        $scope.editTask = task;
+        $scope.editedTask = task;
     };
 
     $scope.doneEditing = function (task) {

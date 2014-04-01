@@ -1,0 +1,8 @@
+@mixin linear-gradient($type, $fromColor, $toColor) {
+  background-color: $toColor; /* Fallback Color */
+  background-image: -webkit-linear-gradient($type, $fromColor, $toColor);
+  background-image: -moz-linear-gradient($type, $fromColor, $toColor);
+  background-image: -ms-linear-gradient($type, $fromColor, $toColor);
+  background-image: -o-linear-gradient($type, $fromColor, $toColor);
+  background-image: linear-gradient($type, $fromColor, $toColor);
+}

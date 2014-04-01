@@ -1,0 +1,44 @@
+#secTaskAdd {
+  position: relative;
+  input[type='text'] {
+    border: none;
+    font-size: 18px;
+    line-height: 34px;
+    width: 88%;
+    padding: 3px 0 3px 15px;
+    outline: none;
+  }
+
+  .menus {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 14%;
+    padding: 5px;
+    text-align: right;
+    margin-right: 1%;
+    background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 30%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(30%,rgba(255,255,255,1)));
+    background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 30%);
+    background: -o-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 30%);
+    background: -ms-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 30%);
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 30%);
+
+    .glyphicon {
+      font-size: 24px;
+      margin-left: 10px;
+
+      &:hover {
+        color: lighten($colorDarkPurp, 15);
+      }
+    }
+
+    select {
+      font-size: 14px;
+      border: none;
+      position: relative;
+      top: -4px;
+      outline: none;
+    }
+  }
+}

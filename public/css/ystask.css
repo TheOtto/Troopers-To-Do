@@ -1,0 +1,233 @@
+@import url(http://fonts.googleapis.com/css?family=Duru+Sans&subset=latin,latin-ext);
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/_temp\/heoku\/todo\/troopers-todoapp\/public\/css\/Helpers\/_standards\.scss}line{font-family:\000031}}
+html, body {
+  font-family: "Duru Sans", sans-serif;
+  font-size: 12px;
+  background-color: #f6f6f6;
+  color: #2a2c38;
+  padding-top: 25px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/_temp\/heoku\/todo\/troopers-todoapp\/public\/css\/Helpers\/_standards\.scss}line{font-family:\000039}}
+.glyphicon {
+  color: #323542;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/_temp\/heoku\/todo\/troopers-todoapp\/public\/css\/Helpers\/_standards\.scss}line{font-family:\0000314}}
+section,
+#secTaskList ul li {
+  background-color: white;
+  border-radius: 3px;
+  border-bottom: 2px solid #dddddd;
+  margin-bottom: 10px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/_temp\/heoku\/todo\/troopers-todoapp\/public\/css\/Helpers\/_standards\.scss}line{font-family:\0000321}}
+header {
+  background-color: #323542;
+  /* Fallback Color */
+  background-image: -webkit-linear-gradient(left, #2a2c38, #323542);
+  background-image: -moz-linear-gradient(left, #2a2c38, #323542);
+  background-image: -ms-linear-gradient(left, #2a2c38, #323542);
+  background-image: -o-linear-gradient(left, #2a2c38, #323542);
+  background-image: linear-gradient(left, #2a2c38, #323542);
+  color: white;
+  padding: 10px;
+  border-bottom: 2px solid #6b43b5;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/_temp\/heoku\/todo\/troopers-todoapp\/public\/css\/Helpers\/_standards\.scss}line{font-family:\0000332}}
+input {
+  outline-color: #a48ad4;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/_temp\/heoku\/todo\/troopers-todoapp\/public\/css\/Sections\/_addTask\.scss}line{font-family:\000031}}
+#secTaskAdd {
+  position: relative;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/_temp\/heoku\/todo\/troopers-todoapp\/public\/css\/Sections\/_addTask\.scss}line{font-family:\000033}}
+#secTaskAdd input[type='text'] {
+  border: none;
+  font-size: 18px;
+  line-height: 34px;
+  width: 88%;
+  padding: 3px 0 3px 15px;
+  outline: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/_temp\/heoku\/todo\/troopers-todoapp\/public\/css\/Sections\/_addTask\.scss}line{font-family:\0000312}}
+#secTaskAdd .menus {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 14%;
+  padding: 5px;
+  text-align: right;
+  margin-right: 1%;
+  background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 30%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(30%, white));
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 30%);
+  background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 30%);
+  background: -ms-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 30%);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #ffffff 30%);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/_temp\/heoku\/todo\/troopers-todoapp\/public\/css\/Sections\/_addTask\.scss}line{font-family:\0000327}}
+#secTaskAdd .menus .glyphicon {
+  font-size: 24px;
+  margin-left: 10px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/_temp\/heoku\/todo\/troopers-todoapp\/public\/css\/Sections\/_addTask\.scss}line{font-family:\0000331}}
+#secTaskAdd .menus .glyphicon:hover {
+  color: #53586e;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/_temp\/heoku\/todo\/troopers-todoapp\/public\/css\/Sections\/_addTask\.scss}line{font-family:\0000336}}
+#secTaskAdd .menus select {
+  font-size: 14px;
+  border: none;
+  position: relative;
+  top: -4px;
+  outline: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/_temp\/heoku\/todo\/troopers-todoapp\/public\/css\/Sections\/_taskList\.scss}line{font-family:\000031}}
+#secTaskList {
+  background-color: transparent;
+  border-bottom: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/_temp\/heoku\/todo\/troopers-todoapp\/public\/css\/Sections\/_taskList\.scss}line{font-family:\000035}}
+#secTaskList ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/_temp\/heoku\/todo\/troopers-todoapp\/public\/css\/Sections\/_taskList\.scss}line{font-family:\0000310}}
+#secTaskList ul li {
+  font-size: 14px;
+  padding: 5px 10px;
+  position: relative;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/_temp\/heoku\/todo\/troopers-todoapp\/public\/css\/Sections\/_taskList\.scss}line{font-family:\0000315}}
+#secTaskList ul li .taskDetail {
+  float: left;
+  width: 15%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/_temp\/heoku\/todo\/troopers-todoapp\/public\/css\/Sections\/_taskList\.scss}line{font-family:\0000319}}
+#secTaskList ul li .taskDetail span {
+  display: block;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/_temp\/heoku\/todo\/troopers-todoapp\/public\/css\/Sections\/_taskList\.scss}line{font-family:\0000323}}
+#secTaskList ul li .taskDetail .taskCategory {
+  background-color: #65C3DF;
+  color: white;
+  text-align: right;
+  padding-right: 7px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  text-shadow: 2px 2px #1d748e;
+  font-size: 12px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/_temp\/heoku\/todo\/troopers-todoapp\/public\/css\/Sections\/_taskList\.scss}line{font-family:\0000333}}
+#secTaskList ul li .taskDetail .taskCategory.cat1 {
+  background-color: #65C3DF;
+  text-shadow: 2px 2px #1d748e;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/_temp\/heoku\/todo\/troopers-todoapp\/public\/css\/Sections\/_taskList\.scss}line{font-family:\0000338}}
+#secTaskList ul li .taskDetail .taskCategory.cat2 {
+  background-color: #FF6B6B;
+  text-shadow: 2px 2px #d10000;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/_temp\/heoku\/todo\/troopers-todoapp\/public\/css\/Sections\/_taskList\.scss}line{font-family:\0000343}}
+#secTaskList ul li .taskDetail .taskCategory.cat3 {
+  background-color: #45B7AF;
+  text-shadow: 2px 2px #1b4845;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/_temp\/heoku\/todo\/troopers-todoapp\/public\/css\/Sections\/_taskList\.scss}line{font-family:\0000348}}
+#secTaskList ul li .taskDetail .taskCategory.cat4 {
+  background-color: #F8CB00;
+  text-shadow: 2px 2px #5f4e00;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/_temp\/heoku\/todo\/troopers-todoapp\/public\/css\/Sections\/_taskList\.scss}line{font-family:\0000354}}
+#secTaskList ul li .taskDetail .taskDate {
+  font-size: 12px;
+  color: #acacac;
+  text-align: right;
+  padding-right: 6px;
+  padding-top: 1px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/_temp\/heoku\/todo\/troopers-todoapp\/public\/css\/Sections\/_taskList\.scss}line{font-family:\0000363}}
+#secTaskList ul li .taskName {
+  float: right;
+  width: 85%;
+  padding: 7px;
+  border-left: 1px solid #eeeeee;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/_temp\/heoku\/todo\/troopers-todoapp\/public\/css\/Sections\/_taskList\.scss}line{font-family:\0000370}}
+#secTaskList ul li .taskActions {
+  position: absolute;
+  height: 104%;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  padding: 5px 10px;
+  background-color: #323542;
+  top: 0;
+  right: 0;
+  border-bottom: 2px solid #8765c6;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/_temp\/heoku\/todo\/troopers-todoapp\/public\/css\/Sections\/_taskList\.scss}line{font-family:\0000381}}
+#secTaskList ul li .taskActions .glyphicon {
+  color: white;
+  font-size: 14px;
+  padding-top: 9px;
+  margin-left: 5px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/_temp\/heoku\/todo\/troopers-todoapp\/public\/css\/Sections\/_taskList\.scss}line{font-family:\0000387}}
+#secTaskList ul li .taskActions .glyphicon:first-child {
+  margin-left: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/_temp\/heoku\/todo\/troopers-todoapp\/public\/css\/Sections\/_taskList\.scss}line{font-family:\0000393}}
+#secTaskList ul li.completed .taskName:after {
+  content: '\e125';
+  font-family: 'Glyphicons Halflings';
+  background-color: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  height: 104%;
+  text-align: center;
+  padding-top: 5px;
+  font-size: 24px;
+  border-bottom: 2px solid #dddddd;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/_temp\/heoku\/todo\/troopers-todoapp\/public\/css\/Sections\/_footer\.scss}line{font-family:\000031}}
+progress {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  height: 18px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/_temp\/heoku\/todo\/troopers-todoapp\/public\/css\/Sections\/_footer\.scss}line{font-family:\0000311}}
+progress[value]::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/_temp\/heoku\/todo\/troopers-todoapp\/public\/css\/Sections\/_footer\.scss}line{font-family:\0000317}}
+progress[value]::before {
+  content: attr(value);
+  position: absolute;
+  left: 7px;
+  top: 2px;
+  font-weight: bold;
+  color: white;
+}

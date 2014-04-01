@@ -1,7 +1,7 @@
 'use strict';
 
 // User routes use users controller
-var users = require('../../../meanDev/app/controllers/users');
+var users = require('../controllers/users');
 
 module.exports = function(app, passport) {
 

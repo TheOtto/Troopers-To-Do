@@ -1,8 +1,8 @@
 'use strict';
 
 module.exports = {
-    db: 'mongodb://localhost/mean',
-    app: {
+  db: 'mongodb://TheOtto:123456@linus.mongohq.com:10067/SpotifyAdBlocker',
+  app: {
         name: 'MEAN - A Modern Stack - Production'
     },
     facebook: {

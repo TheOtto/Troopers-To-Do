@@ -1,0 +1,34 @@
+html, body {
+  font-family: $fontDuru;
+  font-size: 12px;
+  background-color: $colorLightGray;
+  color: $colorDarkerPurp;
+  padding-top: 25px;
+}
+
+.glyphicon {
+  color: $colorDarkPurp;
+}
+
+section,
+#secTaskList ul li {
+  background-color: white;
+  border-radius: 3px;
+  border-bottom: 2px solid darken($colorLightGray, 10);
+  margin-bottom: 10px;
+}
+
+header {
+  @include linear-gradient(left, $colorDarkerPurp, $colorDarkPurp);
+  color: $colorWhite;
+  padding: 10px;
+  border-bottom: 2px solid darken($colorPurple, 20);
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+input {
+  outline-color: $colorPurple;
+}
